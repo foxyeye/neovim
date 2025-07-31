@@ -14,21 +14,24 @@ return {
   },
 
   -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
+  { import = "nvchad.blink.lazyspec" },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim", "lua", "vimdoc",
-       "html", "css"
-  		},
-  	},
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+      },
+    },
   },
 
   {
-    'mrcjkb/rustaceanvim',
-    version = '^6', -- Recommended
+    "mrcjkb/rustaceanvim",
+    version = "^6", -- Recommended
     lazy = false, -- This plugin is already lazy
   },
 
@@ -41,11 +44,10 @@ return {
         ["<Esc>"] = require("telescope.actions").close,
       }
 
-
-     -- or 
-     -- table.insert(conf.defaults.mappings.i, your table)
+      -- or
+      -- table.insert(conf.defaults.mappings.i, your table)
 
       return conf
     end,
-  }
+  },
 }
