@@ -30,12 +30,6 @@ return {
   },
 
   {
-    "mrcjkb/rustaceanvim",
-    version = "^6", -- Recommended
-    lazy = false, -- This plugin is already lazy
-  },
-
-  {
     "nvim-telescope/telescope.nvim",
     opts = function(_, conf)
       conf.defaults.mappings.i = {
@@ -50,4 +44,5 @@ return {
       return conf
     end,
   },
+  { "nvim-tree/nvim-tree.lua", enabled = false },
 }
