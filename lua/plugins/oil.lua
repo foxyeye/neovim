@@ -12,7 +12,7 @@ return {
       },
       float = {
         win_options = {
-          winblend = 30,
+          winblend = 10,
         },
         override = function(conf)
           conf.border = "rounded"
