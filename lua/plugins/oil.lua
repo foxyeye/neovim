@@ -10,6 +10,23 @@ return {
 
         show_hidden = true,
       },
+      float = {
+        win_options = {
+          winblend = 30,
+        },
+        override = function(conf)
+          conf.border = "rounded"
+          conf.width = math.floor(vim.o.columns * 0.4)
+          conf.height = math.floor(vim.o.lines * 0.4)
+          conf.row = math.floor((vim.o.lines - conf.height) / 2)
+          conf.col = math.floor((vim.o.columns - conf.width) / 2)
+          return conf
+        end,
+      },
+      keymaps = {
+        ["<Esc>"] = "actions.close",
+        ["q"] = "actions.close",
+      },
     },
     -- Optional dependencies
     -- dependencies = { { "echasnovski/mini.icons", opts = {} } },

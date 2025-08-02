@@ -20,8 +20,8 @@ map("i", "jk", "<ESC>")
 -- end, { desc = "Open MiniFiles" })
 --
 
-map("n", "<leader>e", function()
-  require("oil").open()
-end, { desc = "Open Oil (File Explorer)" })
+-- map("n", "<leader>e", function()
+--   require("oil").open_float()
+-- end, { desc = "Open Oil (File Explorer)" })
 
-map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+map("n", "-", function() require("oil").open_float() end, { desc = "Open parent directory" })
