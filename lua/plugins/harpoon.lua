@@ -141,17 +141,12 @@ return {
                 -- Delete entries in insert mode from harpoon list with <C-d>
                 -- Change the keybinding to your liking
                 map({ "n", "i" }, "<C-d>", function(prompt_bufnr)
-                  local curr_picker = action_state.get_current_picker(prompt_bufnr)
-                  curr_picker:delete_selection(function(selection)
-                    local mark_idx = list_indexOf(harpoon_files.items, function(v)
-                      return v.value == selection[1]
-                    end)
-                    if mark_idx == -1 then
-                      return
-                    end
+                  local state = require "telescope.actions.state"
+                  local selected_entry = state.get_selected_entry()
+                  local current_picker = state.get_current_picker(prompt_bufnr)
 
-                    harpoon:list():removeAt(mark_idx)
-                  end)
+                  table.remove(harpoon_files.items, selected_entry.index)
+                  current_picker:refresh(generate_new_finder(harpoon_files), {})
                 end)
                 -- Move entries up and down with <C-j> and <C-k>
                 -- Change the keybinding to your liking
