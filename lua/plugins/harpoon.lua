@@ -126,7 +126,7 @@ return {
               sorter = conf.generic_sorter {},
               -- Initial mode, change this to your liking. Normal mode is better for navigating with j/k
 
-              initial_mode = "normal",
+              initial_mode = "insert",
               -- Make telescope select buffer from harpoon list
               attach_mappings = function(_, map)
                 actions.select_default:replace(function(prompt_bufnr)
