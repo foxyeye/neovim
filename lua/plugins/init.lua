@@ -44,5 +44,5 @@ return {
       return conf
     end,
   },
-  { "nvim-tree/nvim-tree.lua", enabled = false },
+  -- { "nvim-tree/nvim-tree.lua", enabled = false },
 }
