@@ -25,3 +25,12 @@ map("i", "jk", "<ESC>")
 -- end, { desc = "Open Oil (File Explorer)" })
 
 map("n", "-", function() require("oil").open_float() end, { desc = "Open parent directory" })
+
+
+
+-- Disable mappings
+
+local nomap = vim.keymap.del
+
+nomap("i", "<C-k>")
+nomap("i", "<C-j>")

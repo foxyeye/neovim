@@ -14,7 +14,7 @@ return {
   },
 
   -- test new blink
-  { import = "nvchad.blink.lazyspec" },
+  -- { import = "nvchad.blink.lazyspec" },
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -45,4 +45,19 @@ return {
     end,
   },
   -- { "nvim-tree/nvim-tree.lua", enabled = false },
+  --
+  {
+    "hrsh7th/nvim-cmp",
+
+    opts = function(_, opts)
+      local cmp = require "cmp"
+
+      opts.mapping = cmp.mapping.preset.insert {
+        ["<C-j>"] = cmp.mapping.select_next_item(),
+        ["<C-k>"] = cmp.mapping.select_prev_item(),
+      }
+
+      return opts
+    end,
+  },
 }
