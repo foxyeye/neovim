@@ -2,6 +2,7 @@ return {
   {
     "folke/noice.nvim",
 
+    -- enabled = false,
     event = "VeryLazy",
     opts = {},
     dependencies = {
@@ -16,6 +17,12 @@ return {
             ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
             ["vim.lsp.util.stylize_markdown"] = true,
             ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+          },
+          hover = {
+            enabled = false,
+          },
+          signature = {
+            enabled = false,
           },
         },
         -- you can enable a preset for easier configuration
