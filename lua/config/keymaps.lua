@@ -5,3 +5,8 @@
 -- 插入模式下 ctrl-f 和 ctrl-b
 vim.keymap.set("i", "<C-f>", "<Right>", { desc = "Move right in insert mode" })
 vim.keymap.set("i", "<C-b>", "<Left>", { desc = "Move left in insert mode" })
+
+-- oil
+vim.keymap.set("n", "-", function()
+  require("oil").open_float()
+end, { desc = "Open parent directory" })
