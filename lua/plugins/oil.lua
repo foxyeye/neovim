@@ -16,8 +16,8 @@ return {
         },
         override = function(conf)
           conf.border = "rounded"
-          conf.width = math.floor(vim.o.columns * 0.4)
-          conf.height = math.floor(vim.o.lines * 0.4)
+          conf.width = math.floor(vim.o.columns * 0.6)
+          conf.height = math.floor(vim.o.lines * 0.6)
           conf.row = math.floor((vim.o.lines - conf.height) / 2)
           conf.col = math.floor((vim.o.columns - conf.width) / 2)
           return conf
